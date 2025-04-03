@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .login-box {
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100px;
+            background-color: #ff6600;
+            color: #fff;
+            border: 2px solid #cc5200;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #cc5200;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <form method="POST">
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button onclick="validate()">Login</button>
+        </form>
+        <div id="errorMessage" style="color: red;"></div>
+    </div>
+
+    <script>
+        function validate() {
+            var username = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            const errorMessage = document.getElementById('errorMessage');
+            if (username == "user" && pass == "1212") {
+                open("./after_login_client.html");
+            } else {
+                errorMessage.textContent = "Incorrect username or password."
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="img"><img src="https://www.sitcoe.ac.in/wp-content/uploads/logo.png" alt="logo" height="65px"
+                id="icon">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li class="hideOnMobile"><a href="./after_login_client.php">HOME</a></li>
+                <li class="hideOnMobile"><a href="./about.html">ABOUT</a></li>
+                <li class="hideOnMobile"><a href="./contact.html">CONTACT</a></li>
+                <li><button class="ctn" id="logout">Logout</button></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="contact-container">
+        <h1>Feedback</h1>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <div class="form-group">
+                <input type="hidden" name="access_key" value="27497e7e-d5f9-4520-9c30-dbe49a67d44f">
+                <label for="feedback">Feedback</label>
+                <textarea name="feedback" name="feedback" placeholder="Please give your feedback" required></textarea>
+            </div>
+            <button>send</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="f-back">
+            <p class="info">
+                This website is just made for a project purpose. The notices on the page may be duplicate or irrelevant
+                so take care while seeing it. <br>
+                Please feel free to send us feedback don't get uncomfortable while sending it. Be frank.
+            </p>
+            <div class="div">
+                <a href="./feedback.html"> <button class="ctn">Vote Us</button></a><br>
+                <div class="icons">
+                    <a href=""> <i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <br>
+                <p> All copyrights are reserved @ 2024 sitcoe.org.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        //*** Logout function***//
+
+        document.getElementById('logout').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        })
+    </script>
+
+</body>
+
+</html>

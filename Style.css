@@ -1,0 +1,231 @@
+ * {
+     margin: 0%;
+     padding: 0%;
+ }
+
+ .header {
+     height: 12%;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: black;
+     font-weight: bolder;
+     background-color: #1d4e89;
+     border: 2px solide black;
+     font-size: 25px;
+     position: relative;
+ }
+ .img img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+ .navbar {
+     width: 100%;
+     height: 50px;
+     padding: 5px;
+     margin: auto;
+     align-items: center;
+     display: flex;
+     justify-content: flex-end;
+     position: relative;
+     font-size: large;
+ }
+ .navbar ul {
+    float: right;
+    display: flex; 
+    justify-content: space-around; 
+    list-style-type: none;
+}
+.navbar ul li {
+    margin: 5px;
+}
+
+ .navbar ul li {
+     display: inline-block;
+     margin: 0 20px;
+ }
+
+ .navbar ul li a {
+     color: black;
+ }
+
+ a {
+     text-decoration: none;
+ } 
+
+ .ctn {
+     padding: 5px 8px;
+     background: #4082d2;
+     border-radius: 10px;
+     color: whitesmoke;
+     border: none;
+     font-size: large;
+     height: max-content;
+     width: max-content;
+     cursor: pointer;
+     text-decoration: none;
+     margin: 5px;
+ }
+
+ .ctn:hover {
+     color: black;
+     box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
+ }
+
+ .navbar ul li a:hover {
+     color: rgba(163, 167, 227, 0.979);
+ }
+
+ /* .depart_filter {
+     margin-top: 10px;
+     margin-bottom: 20px;
+     height: 50px;
+     width: 100%;
+     background-color: aliceblue;
+     padding-left: 10px;
+ }
+
+ button.filter {
+     border-radius: 12px;
+     margin: 15px 20px;
+     font-size: 12px;
+     width: 50px;
+     background-color: rgba(177, 228, 235, 0.952);
+     border: 1px rgb(110, 113, 114) solid;
+ }
+
+ button.filter:hover {
+     color: white;
+     background-color: #1d4e89;
+ } */
+
+/* General Styles */
+.depart_filter {
+    margin: 15px;
+}
+
+.filter-toggle {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.filter-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px; /* Spacing between buttons */
+}
+
+.filter {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1 1 45%; /* Buttons adjust based on available width */
+    text-align: center;
+}
+
+.filter:hover {
+    background-color: #0056b3;
+}
+
+.hide {
+    display: none; /* Hides filter buttons by default */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px;
+    }
+    .flt{
+        display: none;
+    }
+}
+
+
+
+ .gallery {
+     height: auto;
+     width: 90%;
+     margin: auto;
+     padding: 20px;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+     grid-gap: 50px;
+     
+ }
+
+ .card:hover {
+     box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+ }
+
+ .f-back {
+     background-color: rgba(41, 53, 213, 0.8);
+     height: 300px;
+     width: 100%;
+     color: #fff;
+     padding: 30px;
+     margin-top: 20px;
+     align-items: center;
+ }
+
+ .icons a {
+     width: 30%;
+     font-size: larger;
+     color: #fff;
+     margin: 5px;
+ }
+
+ .icons a:hover {
+     color: cadetblue;
+     border-radius: 3px;
+
+ }
+
+ .div {
+     margin: 30px auto;
+     height: auto;
+     width: 25%;
+     align-items: center;
+
+ }
+
+
+
+
+ @media (max-width: 952px) {
+    nav ul li a{
+        font-size: 16px;
+
+    }
+}
+@media(max-width:858px){
+   
+    .navbar ul li{
+        display: block;
+    }
+    .navbar ul li a{
+        font-size: 20px;
+    }
+}

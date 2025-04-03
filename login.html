@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login Page</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        form {
+            height: 200px;
+            width: 200px;
+            margin: 50px auto;
+            border: solid rgb(65, 58, 58);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        button {
+            margin: 10px 50px;
+            background-color: chocolate;
+            border: 2px solid saddlebrown;
+            border-radius: 10px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="depart_filter">
+        <button class="filter" data-name="all">All</button>
+        <button class="filter" data-name="cse">CSE</button>
+        <button class="filter" data-name="ai">AI</button>
+        <button class="filter" data-name="ece">ECE</button>
+        <button class="filter" data-name="ce">CE</button>
+        <button class="filter" data-name="me">ME</button>
+        <button class="filter" data-name="ar">AR</button>
+        <button class="filter" data-name="ee">EE</button>
+        <button class="filter" data-name="mx">MX</button>
+    </div>
+    <div class="gallery">
+        <div class="card" style="width: 25rem;" data-department="cse">
+            <a href="./notice1.jpg"><img src="./notice1.jpg" class="card-img-top"></a>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 25rem;" data-department="ai">
+            <a href="./notice2.jpg"><img src="./col1.jpg" class="card-img-top"></a>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="card" style="width: 25rem;" data-department="cse">
+                <a href="./notice1.jpg"><img src="./notice1.jpg" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 25rem;" data-department="ai">
+                <a href="./notice2.jpg"><img src="./notice1.jpg" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="card" style="width: 25rem;" data-department="cse">
+                    <a href="./notice1.jpg"><img src="./notice1.jpg" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 25rem;" data-department="ai">
+                    <a href="./notice2.jpg"><img src="./notice1.jpg" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="card" style="width: 25rem;" data-department="cse">
+                        <a href="./notice1.jpg"><img src="./notice1.jpg" class="card-img-top"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25rem;" data-department="ai">
+                        <a href="./notice2.jpg"><img src="./notice1.jpg" class="card-img-top"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <!-- Add similar cards for other departments -->
+                </div>
+
+                <div class="login_box">
+                    <form action="POST">
+                        <label for="name">User Name</label>
+                        <input type="text" id="username">
+                        <label for="password">Password</label>
+                        <input type="Password" id="pass">
+                        <button onclick="validate()">Login</button>
+                    </form>
+                </div>
+
+                <script>
+                    function validate() {
+                        var username = document.getElementById("username").value;
+                        var pass = document.getElementById("pass").value;
+                        if (username == "user" && pass == "1212") {
+                            open("./after_login_client.html");
+                        } else {
+                            errorMessage.textContent = "Incorrect username or password."
+                        }
+                    }
+
+                   
+                </script>
+</body>
+
+</html>
